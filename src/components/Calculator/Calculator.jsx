@@ -1,44 +1,49 @@
 import React from "react";
+import {
+  ButtonComponentDanger,
+  ButtonComponentLight,
+  ButtonComponentPrimary
+} from "../Button";
 
 const Calculator = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-sm-12"><input type="number" className="form-control"/></div>
-
+        <div className="col-sm-12">
+          <input type="number" className="form-control" />
+        </div>
       </div>
       <div className="row mt-2">
-        <div className="col-sm-3"><button className="btn btn-light btn-block">+</button></div>
-        <div className="col-sm-3"><button className="btn btn-light btn-block">-</button></div>
-        <div className="col-sm-3"><button className="btn btn-light btn-block">x</button></div>
-        <div className="col-sm-3"><button className="btn btn-light btn-block">/</button></div>
+        <ButtonComponentLight title={"+"} />
+        <ButtonComponentLight title={"-"} />
+        <ButtonComponentLight title={"x"} />
+        <ButtonComponentLight title={"/"} />
       </div>
 
-        <div className="row mt-2">
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">7</button></div>
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">8</button></div>
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">9</button></div>
-            <div className="col-sm-3"><button className="btn btn-primary btn-block">=</button></div>
-        </div>
+      <div className="row mt-2">
+        <ButtonComponentLight title={"7"} />
+        <ButtonComponentLight title={"8"} />
+        <ButtonComponentLight title={"9"} />
+        <ButtonComponentPrimary title={"="} />
+      </div>
 
-        <div className="row mt-2">
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">4</button></div>
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">5</button></div>
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">6</button></div>
+      <div className="row mt-2">
+        <ButtonComponentLight title={"4"} />
+        <ButtonComponentLight title={"5"} />
+        <ButtonComponentLight title={"6"} />
+      </div>
 
-        </div>
+      <div className="row mt-2">
+        <ButtonComponentLight title={"1"} />
+        <ButtonComponentLight title={"2"} />
+        <ButtonComponentLight title={"3"} />
+      </div>
 
-        <div className="row mt-2">
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">1</button></div>
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">2</button></div>
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">3</button></div>
-        </div>
-
-        <div className="row mt-2">
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">0</button></div>
-            <div className="col-sm-3"><button className="btn btn btn-light btn-block">.</button></div>
-            <div className="col-sm-3"><button className="btn btn-danger btn-block">AC</button></div>
-        </div>
+      <div className="row mt-2">
+        <ButtonComponentLight title={"0"} />
+        <ButtonComponentLight title={"."} />
+        <ButtonComponentDanger title={"AC"} />
+      </div>
     </div>
   );
 };
