@@ -1,7 +1,3 @@
-import {
-  ButtonComponentLight,
-  ButtonComponentDanger,
-  ButtonComponentPrimary
-} from "./ButtonComponent";
+import { ButtonComponent } from "./ButtonComponent";
 
-export { ButtonComponentLight, ButtonComponentDanger, ButtonComponentPrimary };
+export default ButtonComponent;

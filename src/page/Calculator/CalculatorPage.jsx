@@ -1,13 +1,12 @@
 import React from "react";
-import Calculator from "../../components/Calculator";
+import CalculatorPanel from "../../components/Panel";
 
 const CalculatorPage = () => {
-    return (
-        <>
-            <h1>CalculatorPage</h1>
-            <Calculator/>
-        </>
-    )
-}
+  return (
+    <div className="container mt-5">
+      <CalculatorPanel />
+    </div>
+  );
+};
 
 export default CalculatorPage;
