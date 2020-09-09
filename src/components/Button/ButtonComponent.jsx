@@ -1,8 +1,14 @@
 import React from "react";
 
-export const ButtonComponent = ({ title, onClick, value, type }) => {
-  const buttonStyle = type => {
-    switch (type) {
+export const ButtonComponent = ({
+  title,
+  onClick,
+  value,
+  styleButton,
+  type = "button"
+}) => {
+  const buttonStyle = styleButton => {
+    switch (styleButton) {
       case "light":
         return "btn btn btn-light btn-block";
       case "primary":
@@ -17,7 +23,8 @@ export const ButtonComponent = ({ title, onClick, value, type }) => {
     <>
       <div className="col-sm-3">
         <button
-          className={buttonStyle(type)}
+          type={type}
+          className={buttonStyle(styleButton)}
           value={value}
           onClick={onClick}
         >
