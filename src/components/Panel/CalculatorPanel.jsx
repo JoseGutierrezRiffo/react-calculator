@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import ButtonComponent from "../Button";
+import AlertComponent from "../Alert";
 
 const CalculatorPanel = ({ initialValue }) => {
   const [total, setTotal] = useState(initialValue || "");
+  const [error, setError] = useState(false);
 
   const clearDisplay = () => {
     setTotal("");
@@ -20,10 +22,15 @@ const CalculatorPanel = ({ initialValue }) => {
 
   const totalValue = e => {
     e.preventDefault();
+
+    setError(false);
     try {
-      return setTotal(eval(total));
+      if (total.length > 0) {
+        return setTotal(eval(total));
+      }
     } catch (error) {
       setTotal("");
+      setError(true);
     }
   };
 
@@ -33,6 +40,9 @@ const CalculatorPanel = ({ initialValue }) => {
         <div className="card-body">
           <div className="row">
             <div className="col-sm-12">
+              {error ? (
+                <AlertComponent title={"Error"} styleAlert={"danger"} />
+              ) : false}
               <input
                 type="text"
                 className="form-control text-right"
